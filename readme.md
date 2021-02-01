@@ -70,3 +70,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## cloning and installing this project
+- git clone https://github.com/TeraFumba/1-grid your_project_name
+- cd your_project_name
+- composer install
+- npm install
+- create .env file with database configs
+- php artisan key:generate
+- php artisan migrate
