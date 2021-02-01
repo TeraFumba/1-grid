@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::check()) {
+        return redirect('/home');
+    } else {
+        return view('auth.login');
+    }
 });
 
 Auth::routes();
@@ -26,3 +30,5 @@ Route::put('/save_edit_post', 'AdminController@editSave')->name('editSave');
 Route::put('/rate_post', 'AdminController@ratePost')->name('ratePost');
 Route::get('/edit/{id}', 'AdminController@edit')->name('edit');
 Route::delete('/delete_post/{post_id}', 'AdminController@delete')->name('delete');
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

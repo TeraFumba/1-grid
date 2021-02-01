@@ -65,7 +65,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -191,7 +191,7 @@ return [
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
+    'password_reset_url' => null,
     'password_email_url' => 'password/email',
     'profile_url' => false,
 
@@ -225,9 +225,9 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
-            //'search' => true,
-            'topnav' => true,
+            'text' => 'logout',
+            'url'=> '/logout',
+            'icon' => 'fas fa-power-off',
         ],
         [
             'text' => 'blog',
@@ -243,15 +243,16 @@ return [
         // ],
         ['header' => 'POST MANAGEMENT'],
         [
+            'text' => 'Home',
+            'url'  => '/home',
+            'icon' => 'fas fa-home',
+        ],
+        [
             'text' => 'Add New Post',
             'url'  => '/new',
             'icon' => 'fas fa-file',
         ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
+       
       
         // ['header' => 'labels'],
         // [
